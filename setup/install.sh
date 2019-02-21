@@ -146,13 +146,13 @@ else
 		install_powershell
 	elif lsb_release -d | grep -q "Ubuntu"; then
 		Release=Ubuntu
-		sudo apt-get install -y make g++ python-dev python-m2crypto swig python-pip libxml2-dev default-jdk libssl1.0.0 libssl-dev build-essential
+		sudo apt-get install -y make g++ python-dev python-m2crypto swig python-pip libxml2-dev default-jdk libssl1.0.0 libssl1.0-dev build-essential
 		pip install --upgrade pip
 		sudo pip install -r requirements.txt 
 		install_powershell
 	else
 		echo "Unknown distro - Debian/Ubuntu Fallback"
-		sudo apt-get install -y make g++ python-dev python-m2crypto swig python-pip libxml2-dev default-jdk libffi-dev libssl1.0.0 libssl-dev build-essential
+		sudo apt-get install -y make g++ python-dev python-m2crypto swig python-pip libxml2-dev default-jdk libffi-dev libssl1.0.0 libssl1.0-dev build-essential
 		pip install --upgrade pip
 		sudo pip install -r requirements.txt 
 		install_powershell
